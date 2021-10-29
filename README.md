@@ -6,7 +6,9 @@
 
 
 
-<img src="./img/img-task-list.png" alt="imagem da lista de tarefas" <a href="https://listadearefas.netlify.app/">Link do site</a>
+ <a href="https://listadearefas.netlify.app/">Link do site
+<img src="./img/img-task-list.png" alt="imagem da lista de tarefas">
+</a>
 
 > o projeto se trata de uma interface de Login .
 
