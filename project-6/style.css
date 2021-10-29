@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin :0 auto;
+    padding : 0 auto;
+    display : block;
+    text-align: left;
+    background-color:slategray;
+}
+
+form{
+    background-color:darkslateblue;
+    width:50%;
+    height: 100%;
+    margin :0 auto;
+
+}
+
+p,h3,header,.option{
+    margin :0 auto;
+    color:white;
+    
+    
+}
