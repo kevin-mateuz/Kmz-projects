@@ -6,7 +6,7 @@ let listaCompleta = document.getElementById("tarefas")
 let arrayDeTarefas = []
 recarregarTarefas()
 
-
+//função usada para mostrar a tarefa a qual foi adicionada pelo usuário
 function mostrarTarefas() {
     let novaLi = ""
 
@@ -30,13 +30,13 @@ function mostrarTarefas() {
     localStorage.setItem("lista", JSON.stringify(arrayDeTarefas))
 }
 
-
+//função de delete usada para excluir uma tarefa 
 function deletarTarefa(index){
     arrayDeTarefas.splice(index, 1)
 
     mostrarTarefas()
 }
-
+//função usada para adicionar uma tarefa
 function adicionarTarefa() {
     if (input.value){
     arrayDeTarefas.push({
@@ -50,13 +50,13 @@ function adicionarTarefa() {
     mostrarTarefas()
     
 }
-
+//função de check usada para riscar uma tarefa mostrando que ela ja foi concluida pelo usuário
 function concluirTarefa(index){
    arrayDeTarefas[index].concluida = !arrayDeTarefas[index].concluida
 
    mostrarTarefas()
 }
-
+//função que mostra as tarefas novamente após o fechamento da página
 function recarregarTarefas(){
     let minhasTarefas = localStorage.getItem("lista")
     if (minhasTarefas ){
@@ -74,7 +74,7 @@ function adicionarPeloEnter(teclas){
         adicionarTarefa()
     }
 }
-
+//esse trecho é responsável por ouvir ou saber quando o click no botão aconteceu e assim a função de adicionar a tarefa é ativada
 button.addEventListener("click", adicionarTarefa)
-
+//o trecho abaixo é usado para adicionara as tarefas pressionando o botão enter de seu teclado 
 document.addEventListener("keypress",adicionarPeloEnter)
